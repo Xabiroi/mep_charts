@@ -8,6 +8,8 @@ metadata:
     io.kompose.service: mongodb
   name: mongodb
 spec:
+  type: ClusterIP
+  clusterIP: None
   ports:
     - name: "27017"
       port: 27017

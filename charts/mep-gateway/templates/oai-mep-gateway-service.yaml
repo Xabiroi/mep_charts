@@ -8,6 +8,8 @@ metadata:
     io.kompose.service: oai-mep-gateway-service #sin el service?
   name: oai-mep-gateway-service #sin el service?
 spec:
+  type: ClusterIP
+  clusterIP: None
   ports:
     - name: "kong-admin"
       protocol: TCP

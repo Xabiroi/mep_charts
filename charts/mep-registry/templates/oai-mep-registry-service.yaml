@@ -8,6 +8,8 @@ metadata:
     io.kompose.service: oai-mep-registry
   name: oai-mep-registry
 spec:
+  type: ClusterIP
+  clusterIP: None
   ports:
     - name: "80"
       port: 80
