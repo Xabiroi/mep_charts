@@ -43,9 +43,9 @@ maintainers:
   - name:  OPENAIRINTERFACE
     email: contact@openairinterface.org
     
-dependencies:
-- condition: mep-gateway.enabled
-  name: mep-gateway
-  repository: "file://../mep-gateway"
-  version: v2.0.1
+#dependencies:
+#- condition: mep-gateway.enabled
+#  name: mep-gateway
+#  repository: "file://../mep-gateway"
+#  version: v2.0.1
 

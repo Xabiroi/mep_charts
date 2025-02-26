@@ -41,8 +41,8 @@ maintainers:
   - name:  OPENAIRINTERFACE
     email: contact@openairinterface.org
     
-dependencies:
-- condition: mep-registry.enabled
-  name: mep-registry
-  repository: "file://../mep-registry"
-  version: v2.0.1
+#dependencies:
+#- condition: mep-registry.enabled
+#  name: mep-registry
+#  repository: "file://../mep-registry"
+#  version: v2.0.1

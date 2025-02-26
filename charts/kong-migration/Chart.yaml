@@ -43,8 +43,8 @@ maintainers:
   - name:  OPENAIRINTERFACE
     email: contact@openairinterface.org
     
-dependencies:
-- condition: mep-gateway-db.enabled
-  name: mep-gateway-db
-  repository: "file://../mep-gateway-db"
-  version: v2.0.1
+#dependencies:
+#- condition: mep-gateway-db.enabled
+#  name: mep-gateway-db
+#  repository: "file://../mep-gateway-db"
+#  version: v2.0.1
