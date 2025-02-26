@@ -35,13 +35,13 @@ spec:
             - name: KONG_PROXY_LISTEN_SSL
               value: 0.0.0.0:8443
           image: kong:3.0-alpine
-          livenessProbe:
-            exec:
-              command:
-                - netstat -anpe | grep '8001' | grep 'LISTEN'
-            failureThreshold: 15
-            periodSeconds: 5
-            timeoutSeconds: 2
+#          livenessProbe:
+#            exec:
+#              command:
+#                - netstat -anpe | grep '8001' | grep 'LISTEN'
+#            failureThreshold: 15
+#            periodSeconds: 5
+#            timeoutSeconds: 2
           ports:
             - containerPort: 8001
               #hostPort: 8001

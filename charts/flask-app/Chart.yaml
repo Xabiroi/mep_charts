@@ -32,7 +32,7 @@ appVersion: v2.0.1
 
 keywords:
   - 5G
-  - flask-app
+  - flask
 
 sources:
   - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g

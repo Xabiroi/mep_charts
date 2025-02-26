@@ -35,7 +35,6 @@ keywords:
   - mep-gateway
 
 sources:
-  - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-ausf
   - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed
   - https://openairinterface.org/
 

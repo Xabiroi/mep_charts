@@ -8,7 +8,7 @@ description: OAI 5G MEP Release
 appVersion: v2.0.1
 
 keywords:
-  - KONG
+  - KG
   - MEP
 
 maintainers:
