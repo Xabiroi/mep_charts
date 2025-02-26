@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: flask-ingress
+spec:
+  rules:
+#    - host: 10.177.104.31 #flask-test-service #oai-hello-world  # Replace with your actual domain or IP
+#      http:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: flask-test-service
+                port:
+                  number: 6000
+          - path: /hello2
+            pathType: Prefix
+            backend:
+              service:
+                name: flask-test-service
+                port:
+                  number: 6000

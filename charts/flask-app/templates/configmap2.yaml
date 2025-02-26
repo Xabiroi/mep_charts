@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: descriptor-file
+data:
+  hello-world-descriptor.yaml: |
+    name: 'hello-world-app'
+    type: 'TrafficAPI'
+    path: '/'
+    endpoints:
+    - name: hello
+      path: "/"
+      method: GET
+    - name: hello2
+      path: "/hello2"
+      method: GET
+    description: 'Hello World Flask Application'
