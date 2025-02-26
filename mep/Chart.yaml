@@ -1,0 +1,42 @@
+apiVersion: v2
+name: mep
+type: application
+icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+version: v2.0.1
+description: OAI 5G MEP Release
+
+appVersion: v2.0.1
+
+keywords:
+  - kONG
+  - MEP
+
+maintainers:
+  - name:  OPENAIRINTERFACE
+    email: contact@openairinterface.org
+
+dependencies:
+- condition: kong-migration.enabled
+  name: kong-migration
+  repository: "file://../kong-migration"
+  version: v2.0.1
+- condition: mep-gateway.enabled
+  name: mep-gateway
+  repository: "file://../mep-gateway"
+  version: v2.0.1
+- condition: mep-gateway-db.enabled
+  name: mep-gateway-db
+  repository: "file://../mep-gateway-db"
+  version: v2.0.1
+- condition: mep-registry.enabled
+  name: mep-registry
+  repository: "file://../mep-registry"
+  version: v2.0.1
+- condition: mongodb.enabled
+  name: mongodb
+  repository: "file://../mongodb"
+  version: v2.0.1
+#- condition: oai-rnis.enabled
+#  name: oai-rnis
+#  repository: "file://../oai-rnis"
+#  version: v2.0.1

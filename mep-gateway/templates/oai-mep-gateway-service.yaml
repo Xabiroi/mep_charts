@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.32.0 (765fde254)
+  labels:
+    io.kompose.service: oai-mep-gateway-service #sin el service?
+  name: oai-mep-gateway-service #sin el service?
+spec:
+  ports:
+    - name: "kong-admin"
+      protocol: TCP
+      port: 8001
+      targetPort: 8001
+    - name: "kong-proxy"
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+    - name: "kong-proxy-ssl"
+      protocol: TCP
+      port: 443
+      targetPort: 8443
+  selector:
+    io.kompose.service: oai-mep-gateway

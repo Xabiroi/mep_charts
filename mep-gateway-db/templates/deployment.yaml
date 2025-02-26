@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.32.0 (765fde254)
+  labels:
+    io.kompose.service: oai-mep-gateway-db
+  name: oai-mep-gateway-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: oai-mep-gateway-db
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.32.0 (765fde254)
+      labels:
+        io.kompose.network/oai-mep: "true"
+        io.kompose.service: oai-mep-gateway-db
+    spec:
+      containers:
+        - env:
+            - name: POSTGRES_DB
+              value: kong
+            - name: POSTGRES_PASSWORD
+              value: kong
+            - name: POSTGRES_USER
+              value: kong
+          image: postgres:9.6
+          livenessProbe:
+            exec:
+              command:
+                - pg_isready
+                - -U
+                - kong
+            failureThreshold: 5
+            periodSeconds: 5
+            timeoutSeconds: 5
+          name: oai-mep-gateway-db
+          ports:
+            - containerPort: 5432
+              hostPort: 48153
+              protocol: TCP
+      restartPolicy: Always

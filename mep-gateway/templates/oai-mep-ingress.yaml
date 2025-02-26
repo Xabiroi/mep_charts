@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: oai-mep-gateway-ingress
+  namespace: default
+spec:
+  rules:
+#  - host: oai-mep-gateway-service
+#    http:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: oai-mep-gateway-service
+            port:
+              number: 8080
+
