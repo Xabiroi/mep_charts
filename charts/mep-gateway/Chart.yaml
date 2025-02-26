@@ -31,7 +31,7 @@ version: v2.0.1
 appVersion: v2.0.1
 
 keywords:
-  - 5GCN
+  - 5G
   - mep-gateway
 
 sources:
