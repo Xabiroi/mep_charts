@@ -1,5 +1,30 @@
 apiVersion: v1
 entries:
+  flask-app:
+  - apiVersion: v2
+    appVersion: v2.0.1
+    created: "2025-02-26T09:41:13.83950644Z"
+    dependencies:
+    - condition: mep-registry.enabled
+      name: mep-registry
+      repository: file://../mep-registry
+      version: v2.0.1
+    description: Helm chart for flask-app
+    digest: 82a2d1294d79dca1a9d8897b916e923feb7b9b42ed67a09eb24d4f32dd16471b
+    icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+    keywords:
+    - 5GCN
+    - flask-app
+    maintainers:
+    - email: contact@openairinterface.org
+      name: OPENAIRINTERFACE
+    name: flask-app
+    sources:
+    - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-ausf
+    type: application
+    urls:
+    - https://github.com/Xabiroi/mep_charts/releases/download/flask-app-v2.0.1/flask-app-v2.0.1.tgz
+    version: v2.0.1
   kong-migration:
   - apiVersion: v2
     appVersion: v2.0.1
@@ -168,4 +193,4 @@ entries:
     urls:
     - https://github.com/Xabiroi/mep_charts/releases/download/mongodb-v2.0.1/mongodb-v2.0.1.tgz
     version: v2.0.1
-generated: "2025-02-26T08:54:08.436302576Z"
+generated: "2025-02-26T09:41:13.839516899Z"
