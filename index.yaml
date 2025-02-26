@@ -1,0 +1,171 @@
+apiVersion: v1
+entries:
+  kong-migration:
+  - apiVersion: v2
+    appVersion: v2.0.1
+    created: "2025-02-26T08:54:07.900727626Z"
+    dependencies:
+    - condition: mep-gateway-db.enabled
+      name: mep-gateway-db
+      repository: file://../mep-gateway-db
+      version: v2.0.1
+    description: Helm chart for kong-migration network function
+    digest: 9fbae360d087f0fc0c90f4b53fc7cac3dd3b666866bd3848538bd36f103e72e7
+    icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+    keywords:
+    - 5GCN
+    - kong-migration
+    maintainers:
+    - email: contact@openairinterface.org
+      name: OPENAIRINTERFACE
+    name: kong-migration
+    sources:
+    - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-ausf
+    - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed
+    - https://openairinterface.org/
+    type: application
+    urls:
+    - https://github.com/Xabiroi/mep_charts/releases/download/kong-migration-v2.0.1/kong-migration-v2.0.1.tgz
+    version: v2.0.1
+  mep:
+  - apiVersion: v2
+    appVersion: v2.0.1
+    created: "2025-02-26T08:54:08.339410609Z"
+    dependencies:
+    - condition: kong-migration.enabled
+      name: kong-migration
+      repository: file://../kong-migration
+      version: v2.0.1
+    - condition: mep-gateway.enabled
+      name: mep-gateway
+      repository: file://../mep-gateway
+      version: v2.0.1
+    - condition: mep-gateway-db.enabled
+      name: mep-gateway-db
+      repository: file://../mep-gateway-db
+      version: v2.0.1
+    - condition: mep-registry.enabled
+      name: mep-registry
+      repository: file://../mep-registry
+      version: v2.0.1
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: file://../mongodb
+      version: v2.0.1
+    description: OAI 5G MEP Release
+    digest: 41ce6c7f71262581237576ab44d121c6b6ef550a8bbefe3fdeb949a1d13c044c
+    icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+    keywords:
+    - kONG
+    - MEP
+    maintainers:
+    - email: contact@openairinterface.org
+      name: OPENAIRINTERFACE
+    name: mep
+    type: application
+    urls:
+    - https://github.com/Xabiroi/mep_charts/releases/download/mep-v2.0.1/mep-v2.0.1.tgz
+    version: v2.0.1
+  mep-gateway:
+  - apiVersion: v2
+    appVersion: v2.0.1
+    created: "2025-02-26T08:54:08.133631028Z"
+    dependencies:
+    - condition: kong-migration.enabled
+      name: kong-migration
+      repository: file://../kong-migration
+      version: v2.0.1
+    - condition: mep-gateway-db.enabled
+      name: mep-gateway-db
+      repository: file://../mep-gateway-db
+      version: v2.0.1
+    description: Helm chart for mep-gateway network function
+    digest: 50aafea70dfafaec980cc51a961c99969be5d6fded691c45b47bef784915df12
+    icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+    keywords:
+    - 5GCN
+    - mep-gateway
+    maintainers:
+    - email: contact@openairinterface.org
+      name: OPENAIRINTERFACE
+    name: mep-gateway
+    sources:
+    - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-ausf
+    - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed
+    - https://openairinterface.org/
+    type: application
+    urls:
+    - https://github.com/Xabiroi/mep_charts/releases/download/mep-gateway-v2.0.1/mep-gateway-v2.0.1.tgz
+    version: v2.0.1
+  mep-gateway-db:
+  - apiVersion: v2
+    appVersion: v2.0.1
+    created: "2025-02-26T08:54:08.005163519Z"
+    description: Helm chart for mep-gateway-db network function
+    digest: 735152d7558863c60157b5a7befc2cba0cb50413384d050f4b826ca204296e2c
+    icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+    keywords:
+    - 5GCN
+    - mep-gateway-db
+    maintainers:
+    - email: contact@openairinterface.org
+      name: OPENAIRINTERFACE
+    name: mep-gateway-db
+    sources:
+    - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-ausf
+    - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed
+    - https://openairinterface.org/
+    type: application
+    urls:
+    - https://github.com/Xabiroi/mep_charts/releases/download/mep-gateway-db-v2.0.1/mep-gateway-db-v2.0.1.tgz
+    version: v2.0.1
+  mep-registry:
+  - apiVersion: v2
+    appVersion: v2.0.1
+    created: "2025-02-26T08:54:08.241647268Z"
+    dependencies:
+    - condition: mep-gateway.enabled
+      name: mep-gateway
+      repository: file://../mep-gateway
+      version: v2.0.1
+    description: Helm chart for mep-registry network function
+    digest: 7a156aaea033b2aa2ca69db53f3a3f0c963dfaefe8562efa765e4e5cd7f1feb6
+    icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+    keywords:
+    - 5GCN
+    - mep-registry
+    maintainers:
+    - email: contact@openairinterface.org
+      name: OPENAIRINTERFACE
+    name: mep-registry
+    sources:
+    - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-ausf
+    - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed
+    - https://openairinterface.org/
+    type: application
+    urls:
+    - https://github.com/Xabiroi/mep_charts/releases/download/mep-registry-v2.0.1/mep-registry-v2.0.1.tgz
+    version: v2.0.1
+  mongodb:
+  - apiVersion: v2
+    appVersion: v2.0.1
+    created: "2025-02-26T08:54:08.436291205Z"
+    description: Helm chart for mongodb network function
+    digest: 61b520e625066aaa016d6c68b59dabbd07f9e7c5b1c697c48923308dded3c16d
+    icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+    keywords:
+    - 5GCN
+    - mongodb
+    maintainers:
+    - email: contact@openairinterface.org
+      name: OPENAIRINTERFACE
+    name: mongodb
+    sources:
+    - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-ausf
+    - https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed
+    - https://openairinterface.org/
+    type: application
+    urls:
+    - https://github.com/Xabiroi/mep_charts/releases/download/mongodb-v2.0.1/mongodb-v2.0.1.tgz
+    version: v2.0.1
+generated: "2025-02-26T08:54:08.436302576Z"
