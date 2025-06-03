@@ -5,10 +5,10 @@ metadata:
 data:
   configuration.yaml: |
     application:
-      host:  10.177.104.31 #"192.168.1.140"
+      host:  10.177.104.210 #"192.168.1.140"
       port: "80"
       loglevel: "info"
       versionEndpoint: '/v1'
       mep:
         register: "yes"
-        registrationUrl:  "http://10.177.104.114:8080/service_registry/v1/register"
+        registrationUrl:  "http://10.177.104.120:8080/service_registry/v1/register"
