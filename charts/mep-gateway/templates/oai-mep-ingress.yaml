@@ -13,7 +13,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: oai-mep-gateway-service
+            name: oai-mep-gateway
             port:
               number: 8080
 

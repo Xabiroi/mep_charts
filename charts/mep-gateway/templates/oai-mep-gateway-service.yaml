@@ -5,8 +5,8 @@ metadata:
     kompose.cmd: kompose convert
     kompose.version: 1.32.0 (765fde254)
   labels:
-    io.kompose.service: oai-mep-gateway-service #sin el service?
-  name: oai-mep-gateway-service #sin el service?
+    io.kompose.service: oai-mep-gateway
+  name: oai-mep-gateway
 spec:
   type: ClusterIP
   clusterIP: None
